@@ -10,5 +10,8 @@
             Id = id;
             Nume = nume;
         }
+
+        public ICollection<Stire> Stiri { get; set; }
+          
     }
 }

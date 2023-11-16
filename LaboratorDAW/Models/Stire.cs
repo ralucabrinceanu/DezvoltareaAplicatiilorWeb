@@ -9,8 +9,10 @@
         public string Autor { get; set; }
         public Categorie Categorie { get; set; }
         public int CategorieId { get; set; }
+        public DateTime DataAdaugarii { get; set; }
 
-        public Stire(int id, string titlu, string lead, string continut, string autor, int categorie)
+        
+        public Stire(int id, string titlu, string lead, string continut, string autor, int categorie, DateTime dataAdaugarii)
         {
             Id = id;
             Titlu = titlu;
@@ -18,11 +20,13 @@
             Continut = continut;
             Autor = autor;
             CategorieId = categorie;
+            DataAdaugarii = dataAdaugarii;
         }
 
         public Stire()
         {
             
         }
+        
     }
 }

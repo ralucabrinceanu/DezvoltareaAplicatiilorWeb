@@ -1,0 +1,16 @@
+﻿@page "{stireId:int}"
+@model LaboratorDAW.Pages.StireModel
+@{
+}
+
+
+<div>
+    <h2>@Model.stire.Titlu</h2>
+    <p><i>@Model.stire.DataAdaugarii</i></p>
+    <h4>@Model.stire.Autor</h4>
+    <p>@Model.stire.Lead</p>
+    <p>@Model.stire.Continut</p>
+</div>
+<div>
+    <a asp-page="/Index">Pagina principală</a>
+</div>
