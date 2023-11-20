@@ -19,6 +19,6 @@ namespace LaboratorDAW.ContextModels
                 .WithMany(c => c.Stiri)
                 .HasForeignKey(s => s.CategorieId);
         }
-       
+
     }
 }

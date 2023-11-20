@@ -79,12 +79,17 @@ namespace LaboratorDAW.Migrations
             modelBuilder.Entity("LaboratorDAW.Models.Stire", b =>
                 {
                     b.HasOne("LaboratorDAW.Models.Categorie", "Categorie")
-                        .WithMany()
+                        .WithMany("Stiri")
                         .HasForeignKey("CategorieId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Categorie");
+                });
+
+            modelBuilder.Entity("LaboratorDAW.Models.Categorie", b =>
+                {
+                    b.Navigation("Stiri");
                 });
 #pragma warning restore 612, 618
         }

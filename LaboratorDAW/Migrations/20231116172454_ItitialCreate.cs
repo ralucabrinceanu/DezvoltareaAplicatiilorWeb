@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace LaboratorDAW.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class ItitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

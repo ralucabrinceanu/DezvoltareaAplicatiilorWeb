@@ -1,0 +1,30 @@
+﻿@page
+@model LaboratorDAW.Pages.EditeazaStireModel
+@{
+}
+
+
+<form method="post">
+    <input asp-for="@Model.Stire.Id" hidden /><br />
+
+    <label asp-for="@Model.Stire.Titlu">Titlu știre</label><br />
+    <input asp-for="@Model.Stire.Titlu" /><br />
+
+    <label>Lead</label> <br>
+    <input asp-for="@Model.Stire.Lead" /> <br>
+
+    <label>Conținut</label> <br>
+    <input asp-for="@Model.Stire.Continut" /> <br>
+
+    <label>Autor</label> <br>
+    <input asp-for="@Model.Stire.Autor" /> <br>
+
+    <label>Categorie</label> <br>
+    <select asp-for="@Model.Stire.CategorieId"
+            asp-items="@Model.categorie"></select> <br>
+
+    <label>Data adăugării</label> <br>
+    <input asp-for="@Model.Stire.DataAdaugarii" /> <br>
+
+    <input type="submit" />
+</form>

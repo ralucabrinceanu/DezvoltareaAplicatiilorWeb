@@ -5,15 +5,27 @@
 }
 
 
+
+<div id="btnAdaugaStire">
+    <a asp-page="/AdaugaStire" class="btn btn-navy">Adaugă știre</a>
+</div>
+
+
 <div>
     @foreach (var stire in Model.stiri)
     {
-
-        <a asp-page="/Stire" asp-route-stireId="@stire.Id"><strong>@stire.Titlu</strong></a>
-        
-        <p>
+        <section id="stire">
+            <a asp-page="/Stire" asp-route-stireId="@stire.Id"><strong>@stire.Titlu</strong></a><br>
             @stire.Lead <br>
-            Adăugat de @stire.Autor la data de @stire.DataAdaugarii în categoria @stire.Categorie
-        </p>
+            <p>Adăugat de @stire.Autor la data de @stire.DataAdaugarii. </p>
+            <div id="butoaneIndex">
+                <a asp-page="/EditeazaStire" asp-route-id="@stire.Id" class="btn btn-green">Editează știre</a>
+                <a asp-page="/Stergere" asp-route-id="@stire.Id" class="btn btn-red">Ștergere știre</a>
+                
+            </div>
+        </section>
     }
 </div>
+
+
+

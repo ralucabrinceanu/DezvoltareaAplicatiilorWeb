@@ -1,0 +1,24 @@
+﻿@page
+@model LaboratorDAW.Pages.StergereModel
+@{
+}
+
+
+<script>
+
+    var userConfirmare = confirm("Doriți să ștergeți știrea?");
+    if (userConfirmare) {
+        //console.log(`you clicked on 'confirm'`)
+        //console.log(window.location.href);
+        
+        var currentUrl = window.location.href;
+        var returnUrl = currentUrl + "&userConfirmare=true";
+        fetch(returnUrl)
+
+    } else {
+        window.location.href = "index";
+    }
+</script>
+
+
+<h2 style="text-align: center; font-family: Arial, Helvetica, sans-serif">Știrea a fost ștearsă cu succes.</h2>
