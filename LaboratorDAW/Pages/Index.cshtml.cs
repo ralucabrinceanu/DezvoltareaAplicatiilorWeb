@@ -20,7 +20,7 @@ namespace LaboratorDAW.Pages
 
         public void OnGet()
         {
-            stiri = _stiriContext.Stire.ToList();
+            stiri = _stiriContext.Stire.Include(s => s.Categorie).ToList();
         }
     }
 }

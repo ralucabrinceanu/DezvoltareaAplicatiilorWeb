@@ -17,7 +17,7 @@
         <section id="stire">
             <a asp-page="/Stire" asp-route-stireId="@stire.Id"><strong>@stire.Titlu</strong></a><br>
             @stire.Lead <br>
-            <p>Adăugat de @stire.Autor la data de @stire.DataAdaugarii. </p>
+            <p>Adăugat de @stire.Autor la data de @stire.DataAdaugarii in categoria @stire.Categorie.Nume </p>
             <div id="butoaneIndex">
                 <a asp-page="/EditeazaStire" asp-route-id="@stire.Id" class="btn btn-green">Editează știre</a>
                 <a asp-page="/Stergere" asp-route-id="@stire.Id" class="btn btn-red">Ștergere știre</a>

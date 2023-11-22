@@ -12,13 +12,14 @@
         public DateTime DataAdaugarii { get; set; }
 
         
-        public Stire(int id, string titlu, string lead, string continut, string autor, int categorie, DateTime dataAdaugarii)
+        public Stire(int id, string titlu, string lead, string continut, string autor, Categorie categoriee, int categorie, DateTime dataAdaugarii)
         {
             Id = id;
             Titlu = titlu;
             Lead = lead;
             Continut = continut;
             Autor = autor;
+            Categorie = categoriee;
             CategorieId = categorie;
             DataAdaugarii = dataAdaugarii;
         }
